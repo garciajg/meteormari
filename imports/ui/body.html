@@ -1,0 +1,17 @@
+<body>
+    <div class="container">
+      <header>
+        <h1>Productos</h1>
+      </header>
+   
+      <ul>
+        {{#each products}}
+          {{> product}}
+        {{/each}}
+      </ul>
+    </div>
+</body>
+   
+<template name="product">
+<li>{{product}}</li>
+</template>
