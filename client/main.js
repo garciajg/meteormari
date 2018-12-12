@@ -20,5 +20,5 @@
 //     instance.counter.set(instance.counter.get() + 1);
 //   },
 // });
-
+import '../imports/startup/accounts-config.js';
 import '../imports/ui/body.js';

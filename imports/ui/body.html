@@ -1,9 +1,18 @@
 <body>
     <div class="container">
       <header>
-        <h1>Productos</h1>
+        <h1>Productos ({{incompleteCount}})</h1>
+        <label class="hide-completed">
+          <input type="checkbox" />
+          Esconder productos marcados
+        </label>
+        {{> loginButtons}}
+        {{#if currentUser}}
+          <form class="new-product">
+            <input type="text" name="product_name" placeholder="Agrega Producto" />
+          </form>
+        {{/if}}
       </header>
-   
       <ul>
         {{#each products}}
           {{> product}}
@@ -11,7 +20,3 @@
       </ul>
     </div>
 </body>
-   
-<template name="product">
-<li>{{product}}</li>
-</template>
